@@ -168,15 +168,17 @@
                     <span class="contact__text">{{contact.adres}}</span>
                 </div>
 
-                <form action="" class="contact__form">
+                <form action="{% url 'save_contacts' %}" class="contact__form" method="POST">
+                    {%csrf_token%}
+
                     <div class="contact__inputs">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
+                        {{contacts.name}}
+                        {{contacts.email}}
+                      
                     </div>
-
-                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-
-                    <input type="submit" value="Enviar" class="contact__button">
+                    {{contacts.message}}
+                   
+                    <input type="submit" value="Sumbit" class="contact__button">
                 </form>
             </div>
         </section>

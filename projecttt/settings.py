@@ -25,8 +25,13 @@ SECRET_KEY = 'django-insecure-m2-is*4^z@jkyiv6s&csx9a^hf03zh_***um05tg_7$j!(i1sm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
+ALLOWED_HOSTS = []
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = '2fbf00b91338ea'
+EMAIL_HOST_PASSWORD = 'c0682b6cce6cd6'
+EMAIL_PORT = '2525'
 
 # Application definition
 
